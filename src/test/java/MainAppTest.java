@@ -4,7 +4,6 @@ import org.rapidoid.http.*;
 import org.rapidoid.json.JSON;
 import org.rapidoid.setup.On;
 import static org.junit.jupiter.api.Assertions.*;
-import org.rapidoid.u.U;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
