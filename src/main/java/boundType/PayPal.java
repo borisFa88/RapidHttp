@@ -5,3 +5,4 @@ public final class PayPal implements Payment {
     public void processPayment(double amount) {
 
     }
+}
