@@ -1,8 +1,9 @@
-import org.example.User;
 import org.junit.jupiter.api.*;
 import org.rapidoid.http.*;
 import org.rapidoid.json.JSON;
 import org.rapidoid.setup.On;
+import rapidServer.Rapidoid;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.nio.charset.StandardCharsets;
@@ -10,13 +11,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class MainAppTest {
+public class RapidoidTest {
 
     @BeforeAll
     static void startServer() {
         On.setup().address("localhost").port(9999);
         On.post("/user").json((req) -> {
-            User user = req.data(User.class);
+            Rapidoid.User user = req.data(Rapidoid.User.class);
             return "Hello " + user.name + ", age: " + user.age;
         });
     }

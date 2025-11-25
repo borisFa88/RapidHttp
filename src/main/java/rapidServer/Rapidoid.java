@@ -1,4 +1,4 @@
-package org.example;
+package rapidServer;
 
 import org.rapidoid.http.Req;
 import org.rapidoid.setup.On;
@@ -21,4 +21,9 @@ public class Rapidoid {
             return "Hello " + user.name + ", age: " + user.age;
         });
        }
+
+    public static class User {
+        public String name;
+        public int age;
     }
+}
