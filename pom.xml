@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Rapidoid</artifactId>
+    <artifactId>UTF-example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -22,24 +22,14 @@
         </dependency>
 
         <dependency>
-            <groupId>org.rapidoid</groupId>
-            <artifactId>rapidoid-http-client</artifactId>
-            <version>5.5.5</version> <!-- use the version you use for rapidoid-setup -->
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.13.4</version>
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.rapidoid</groupId>
-            <artifactId>rapidoid-json</artifactId>
-            <version>4.0.3</version>
-        </dependency>
+
     </dependencies>
+
 
 </project>
