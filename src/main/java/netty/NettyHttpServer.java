@@ -1,4 +1,4 @@
-package org.example;
+package netty;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
@@ -25,7 +25,7 @@ public class NettyHttpServer {
                             ChannelPipeline p = ch.pipeline();
                             p.addLast(new HttpServerCodec());            // HTTP encode/decode
                             p.addLast(new HttpObjectAggregator(65536));  // Full HTTP message
-                            p.addLast(new SimpleChannelInboundHandler<FullHttpRequest>() {
+                            p.addLast(new RouterHandler() {
                                 @Override
                                 protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) {
                                     byte[] content = "Hello from Netty\n".getBytes();
@@ -45,7 +45,7 @@ public class NettyHttpServer {
                     });
 
             ChannelFuture f = b.bind(8000).sync();
-            System.out.println("Netty server started on port 8080");
+            System.out.println("Netty server started on port 8000");
             f.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
