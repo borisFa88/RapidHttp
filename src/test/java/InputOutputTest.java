@@ -10,7 +10,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.stream.Stream;
 
 
-
 public class InputOutputTest {
     String inputFile= "utfFile.txt";
     @Test
